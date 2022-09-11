@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
-import logo from '../dist/images/logo.png'
+import logo from '../dist/img/logo.png'
 import { motion } from 'framer-motion'
 import { FaBars } from "react-icons/fa"
 import { AiOutlineClose } from 'react-icons/ai'
