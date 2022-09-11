@@ -36,7 +36,7 @@ function Contact() {
             <div className='main-title z-[2]'>
                 <h2 className='z-[2]'>Contact <span className='z-[2]'>me</span></h2>
             </div>
-            <p className='my-4 text-center text-xl'>I'd love to help you ! </p>
+            <p className='my-4 text-center text-xl'>I would love to help you ! </p>
             <div className='  '>
                 <motion.form
                     variants={staggerTextContainer}
