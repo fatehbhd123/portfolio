@@ -73,11 +73,11 @@ a {
 }
 
 #feed {
-  background-image: url("../dist/img/about.jpg")
+  background-image: url("/about.jpg")
 }
 
 #home {
-  background-image: url('../dist/img/home.jpg')
+  background-image: url('/home.jpg')
 }
 
 

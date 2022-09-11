@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import Fateh from "../dist/img/fateh.jpg"
+import Fateh from "/public/fateh.jpg"
 import { motion } from "framer-motion";
 import { urlFor } from '../sanity'
 import {
