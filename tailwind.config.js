@@ -6,13 +6,8 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'home': "url('../dist/img/home.jpg')",
-        'bg': "url('../dist/img/about.jpg')",
-      }
+
     },
   },
-  plugins: [
-
-  ],
+  plugins: [],
 }

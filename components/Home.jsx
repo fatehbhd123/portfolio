@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 function Home() {
     return (
-        <div id='home' className='min-h-screen flex  items-center  px-7 md:px  bg-home bg-cover bg-right  xl:bg-center bg-no-repeat relative'>
+        <div id='home' className='min-h-screen flex  items-center  px-7 md:px   bg-cover bg-right  xl:bg-center bg-no-repeat relative'>
             <div className='overlay '></div>
             <motion.div
                 initial={{ opacity: 0, x: '-100vw' }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 2, type: 'spring' }}

@@ -72,6 +72,16 @@ a {
   display: none;
 }
 
+
+#feed {
+  background-image: url("../dist/img/about.jpg")
+}
+
+#home {
+  background-image: url('../dist/img/home.jpg')
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
