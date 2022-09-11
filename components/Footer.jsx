@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import Fateh from "../assets/images/logo.png"
+import Fateh from "../dist/images/logo.png"
 
 function Footer() {
     return (
