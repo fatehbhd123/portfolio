@@ -9,7 +9,7 @@ export const staggerTextContainer = {
 };
 
 
-export const staggerAccordionContainer = {
+export const staggerContainer = {
     initial: {},
     animate: {
         transition: {
@@ -19,21 +19,6 @@ export const staggerAccordionContainer = {
         },
     },
 };
-
-export const staggerFooterContainer = {
-    initial: {},
-    animate: {
-        transition: {
-            staggerChildren: 0.6,
-            delayChildren: 0.3,
-        },
-    },
-};
-
-
-
-
-
 
 
 

@@ -1,6 +1,5 @@
 export default async function handler(req, res) {
     const data = JSON.parse(req.body);
-    console.log(data)
     const mutations = [{
         createOrReplace: {
             _type: 'contact',

@@ -1,7 +1,10 @@
 import React from 'react'
 import { urlFor } from '../sanity'
 import { motion } from "framer-motion";
-
+import {
+    staggerContainer,
+    fadeInRight,
+} from '../variants';
 
 const openInNewTab = url => {
     window.open(url, '_blank');
@@ -15,14 +18,20 @@ function Projects({ projects }) {
                 <h2>My <span>projects</span></h2>
             </div>
             <p className='text-center pt-3 font-medium'>Check out some of my work here!</p>
-            <div className='flex gap-8 gap-y-14 flex-wrap items-center justify-center  mt-10'>
+            <motion.div
+                variants={staggerContainer}
+                initial='initial'
+                whileInView={'animate'}
+                viewport={{ once: true, amount: 0.6 }}
+                className='flex gap-8 gap-y-14 flex-wrap items-center justify-center  mt-10'>
                 {projects && projects.map((project, i) => {
                     const { usedSkills } = project;
                     return (
                         <motion.div
-                            whileInView={{ opacity: [0, 1] }}
-                            transition={{ duration: .5, delay: `.${i + 1}`, delayChildren: 1 + i, type: 'spring' }}
-                            key={i} className="bg-[#1E283C] group shadow-gray-900 shadow-2xl opacity-0 rounded-lg overflow-hidden w-[380px] hover:scale-110 duration-200 ease-in">
+                            className='bg-[#1E283C] group shadow-gray-900 shadow-2xl rounded-lg overflow-hidden w-[380px] project '
+                            variants={fadeInRight}
+                            key={i}
+                        >
                             <div className='relative h-40   overflow-hidden'>
                                 <img src={urlFor(project.imgUrl)} alt="" className='w-full h-full ' />
                                 <div className='flex justify-evenly items-center px-2  absolute h-full translate-y-[-100%] group-hover:translate-y-0 overlay w-full top-0 left-0 duration-300'>
@@ -56,7 +65,7 @@ function Projects({ projects }) {
                         </motion.div>
                     )
                 })}
-            </div>
+            </motion.div>
         </div>
     )
 }
