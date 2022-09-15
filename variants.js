@@ -21,7 +21,6 @@ export const staggerContainer = {
 };
 
 
-
 export const fadeInDown = {
     initial: {
         y: -70,

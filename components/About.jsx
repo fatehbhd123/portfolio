@@ -4,11 +4,11 @@ import Fateh from "/public/fateh.jpg"
 import { motion } from "framer-motion";
 import { urlFor } from '../sanity'
 import {
-    staggerContainer,
-    fadeInRight,
     staggerTextContainer,
+    fadeInRight,
+
     fadeInDown,
-    fadeInUp
+
 } from '../variants';
 
 function About({ skills }) {
@@ -23,7 +23,7 @@ function About({ skills }) {
                 variants={staggerTextContainer}
                 initial='initial'
                 whileInView={'animate'}
-                viewport={{ once: true, amount: 0.6 }}
+                viewport={{ once: true, amount: 0.4 }}
                 className='w-full mt-5 mx-auto flex flex-col sm:flex-row items-center gap-3 sm:gap-12 justify-center  shadow-[0_0px_90px_-10px_rgba(0,0,0,0.3)] p-3 pt-10 rounded-xl '>
                 <div
                     className='w-2/4 mx-auto relative sm:w-1/3 md:w-[250px] my-5 sm:my-10 rounded-md  '>
@@ -52,13 +52,14 @@ function About({ skills }) {
             </div>
             <p className='my-4 text-center text-xl'>Check some of my skills </p>
             <motion.div
-                variants={staggerContainer}
+                variants={staggerTextContainer}
                 initial='initial'
-                whileInView={'animate'}
-                viewport={{ once: true, amount: 0.4 }}
+                whileInView='animate'
+                viewport={{ once: true, amount: 0 }}
                 className='mt-10  flex gap-10 flex-wrap items-center justify-center'>
                 {skills.map((skill, i) => {
-                    return (<motion.div className={`pt-4 flex flex-col items-center drop-shadow-md hover:drop-shadow-xl rounded-xl group h-36 w-36 bg-[#edeeef] ease-in `}
+                    return (<motion.div
+                        className={`pt-4 flex flex-col items-center  group h-36 w-36  ease-in `}
                         variants={fadeInRight}
                         key={skill.name}
                     >

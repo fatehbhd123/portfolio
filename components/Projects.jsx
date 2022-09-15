@@ -2,7 +2,7 @@ import React from 'react'
 import { urlFor } from '../sanity'
 import { motion } from "framer-motion";
 import {
-    staggerContainer,
+    staggerTextContainer,
     fadeInRight,
 } from '../variants';
 
@@ -19,21 +19,25 @@ function Projects({ projects }) {
             </div>
             <p className='text-center pt-3 font-medium'>Check out some of my work here!</p>
             <motion.div
-                variants={staggerContainer}
+                variants={staggerTextContainer}
                 initial='initial'
                 whileInView={'animate'}
-                viewport={{ once: true, amount: 0.6 }}
-                className='flex gap-8 gap-y-14 flex-wrap items-center justify-center  mt-10'>
+                viewport={{ once: true, amount: 0 }}
+                className='flex gap-x-8 gap-y-14 flex-wrap items-center justify-center  mt-10'>
                 {projects && projects.map((project, i) => {
                     const { usedSkills } = project;
                     return (
                         <motion.div
-                            className='bg-[#1E283C] group shadow-gray-900 shadow-2xl rounded-lg overflow-hidden w-[380px] project '
+                            className='bg-[#1E283C] group shadow-gray-900 shadow-2xl rounded-lg  sm:w-[380px]'
                             variants={fadeInRight}
+                            whileHover={{
+                                scale: 1.1,
+                            }}
+                            transition={{ duration: .3 }}
                             key={i}
                         >
-                            <div className='relative h-40   overflow-hidden'>
-                                <img src={urlFor(project.imgUrl)} alt="" className='w-full h-full ' />
+                            <div className='relative h-40 overflow-hidden'>
+                                <img src={urlFor(project.imgUrl)} alt="project" className='w-full h-full ' />
                                 <div className='flex justify-evenly items-center px-2  absolute h-full translate-y-[-100%] group-hover:translate-y-0 overlay w-full top-0 left-0 duration-300'>
                                     <div
                                         onClick={() => {

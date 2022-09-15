@@ -67,7 +67,7 @@ function Contact() {
             <motion.form
                 variants={staggerTextContainer}
                 initial='initial'
-                whileInView={'animate'}
+                whileInView='animate'
                 viewport={{ once: true, amount: 0.6 }}
                 className='flex z-[2] flex-col md:flex-row  md:pt-10'>
                 <motion.div
