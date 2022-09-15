@@ -28,7 +28,7 @@ function Projects({ projects }) {
                     const { usedSkills } = project;
                     return (
                         <motion.div
-                            className='bg-[#1E283C] group shadow-gray-900 shadow-2xl rounded-lg  sm:w-[380px]'
+                            className='bg-[#1E283C] group shadow-gray-900 shadow-2xl rounded-lg  sm:w-[380px] overflow-hidden'
                             variants={fadeInRight}
                             whileHover={{
                                 scale: 1.1,

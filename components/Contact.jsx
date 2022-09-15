@@ -32,7 +32,12 @@ function Contact() {
         if (!formData.message) {
             setMessageErr(true)
         }
-        if (!nameErr && !emailErr && !messageErr) {
+
+        if (formData.username && formData.email && formData.email.toLowerCase()
+            .match(
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            )
+            && formData.message) {
             toast("Sending  .  .  . !");
             const contact = {
                 name: formData.username,
@@ -48,6 +53,7 @@ function Contact() {
             toast('Sent ! i will respond soon')
             return json;
         }
+
 
     };
     const openInNewTab = url => {

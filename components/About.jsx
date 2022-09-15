@@ -59,7 +59,7 @@ function About({ skills }) {
                 className='mt-10  flex gap-10 flex-wrap items-center justify-center'>
                 {skills.map((skill, i) => {
                     return (<motion.div
-                        className={`pt-4 flex flex-col items-center  group h-36 w-36  ease-in `}
+                        className={`pt-4 flex flex-col items-center  group h-36 w-36  ease-in drop-shadow-xl hover:drop-shadow-2xl rounded-xl bg-[#f5f3f3]`}
                         variants={fadeInRight}
                         key={skill.name}
                     >
