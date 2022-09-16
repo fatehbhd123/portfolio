@@ -23,7 +23,7 @@ function Projects({ projects }) {
                 initial='initial'
                 whileInView={'animate'}
                 viewport={{ once: true, amount: 0 }}
-                className='flex gap-x-8 gap-y-14 flex-wrap items-center justify-center  mt-10'>
+                className='flex gap-x-8 gap-y-14 flex-wrap items-center md:justify-start justify-center  mt-10'>
                 {projects.map((project, i) => {
                     const { usedSkills } = project;
                     return (
