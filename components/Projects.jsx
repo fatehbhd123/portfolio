@@ -18,13 +18,13 @@ function Projects({ projects }) {
                 <h2>My <span>projects</span></h2>
             </div>
             <p className='text-center pt-3 font-medium'>Check out some of my work here!</p>
-            <motion.div
+            {projects && <motion.div
                 variants={staggerTextContainer}
                 initial='initial'
                 whileInView={'animate'}
                 viewport={{ once: true, amount: 0 }}
                 className='flex gap-x-8 gap-y-14 flex-wrap items-center justify-center  mt-10'>
-                {projects && projects.map((project, i) => {
+                {projects.map((project, i) => {
                     const { usedSkills } = project;
                     return (
                         <motion.div
@@ -69,7 +69,7 @@ function Projects({ projects }) {
                         </motion.div>
                     )
                 })}
-            </motion.div>
+            </motion.div>}
         </div>
     )
 }

@@ -3,7 +3,7 @@ export const staggerTextContainer = {
     animate: {
         transition: {
             staggerChildren: 0.2,
-            delayChildren: 0.3,
+            delayChildren: 0.1,
         },
     },
 };

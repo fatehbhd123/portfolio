@@ -50,7 +50,7 @@ function About({ skills }) {
                 <h2>My <span>Skills</span></h2>
             </div>
             <p className='my-4 text-center text-xl'>Check some of my skills </p>
-            <motion.div
+            {skills && <motion.div
                 variants={staggerTextContainer}
                 initial='initial'
                 whileInView={'animate'}
@@ -67,8 +67,9 @@ function About({ skills }) {
                         </div>
                         <p className={` font-bold duration-200 ease-linear uppercase `}>{skill.name}</p>
                     </motion.div>)
-                })}
-            </motion.div>
+                })
+                }
+            </motion.div>}
         </div>
     )
 }
