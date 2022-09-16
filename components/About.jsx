@@ -58,7 +58,7 @@ function About({ skills }) {
                 className='mt-10  flex gap-10 flex-wrap items-center md:justify-start justify-center'>
                 {skills.map((skill, i) => {
                     return (<motion.div
-                        className={`flex items-center gap-4 justify-between px-2 rounded-xl group h-14 w-72 bg-[#eee]  `}
+                        className={`flex items-center gap-4 justify-between px-2 rounded-xl group h-14 w-72 bg-[#eee] hover:drop-shadow-xl duration-200 `}
                         variants={fadeInRight}
                         key={skill.name}
                     >

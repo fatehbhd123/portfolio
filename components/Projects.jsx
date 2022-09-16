@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import {
     staggerTextContainer,
     fadeInRight,
+    staggerContainer,
 } from '../variants';
 
 const openInNewTab = url => {
@@ -19,10 +20,10 @@ function Projects({ projects }) {
             </div>
             <p className='text-center pt-3 font-medium'>Check out some of my work here!</p>
             {projects && <motion.div
-                variants={staggerTextContainer}
+                variants={staggerContainer}
                 initial='initial'
                 whileInView={'animate'}
-                viewport={{ once: true, amount: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
                 className='flex gap-x-8 gap-y-14 flex-wrap items-center md:justify-start justify-center  mt-10'>
                 {projects.map((project, i) => {
                     const { usedSkills } = project;
