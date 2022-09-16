@@ -46,26 +46,26 @@ function About({ skills }) {
                     </div>
                 </motion.div>
             </motion.div>
-            <div className='main-title '>
+            <div id='skills' className='main-title '>
                 <h2>My <span>Skills</span></h2>
             </div>
             <p className='my-4 text-center text-xl'>Check some of my skills </p>
             <motion.div
                 variants={staggerTextContainer}
                 initial='initial'
-                whileInView='animate'
+                whileInView={'animate'}
                 viewport={{ once: true, amount: 0.2 }}
                 className='mt-10  flex gap-10 flex-wrap items-center justify-center'>
                 {skills.map((skill, i) => {
                     return (<motion.div
-                        className={`pt-4 flex flex-col items-center  group h-36 w-36  ease-in drop-shadow-xl hover:drop-shadow-2xl rounded-xl bg-[#f5f3f3]`}
+                        className={`flex items-center gap-4 justify-between px-2 rounded-xl group h-14 w-72 bg-[#eee]  `}
                         variants={fadeInRight}
                         key={skill.name}
                     >
-                        <div className={`h-20 w-20 mx-auto border-none`}>
-                            <img className='w-full h-full  group-hover:scale-110 duration-200 ease-in rounded-full' src={urlFor(skill.icon)} alt={skill.name} />
+                        <div className={`h-10 w-10  border-none`}>
+                            <img className='w-full h-full  group-hover:scale-110 duration-200 ease-in ' src={urlFor(skill.icon)} alt={skill.name} />
                         </div>
-                        <p className={`mt-4 font-bold duration-200 ease-linear uppercase `}>{skill.name}</p>
+                        <p className={` font-bold duration-200 ease-linear uppercase `}>{skill.name}</p>
                     </motion.div>)
                 })}
             </motion.div>
