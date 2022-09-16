@@ -14,7 +14,7 @@ import {
 function About({ skills }) {
 
     return (
-        <div className=' px-7 md:px-10 py-16' id='about'>
+        <div className='px-7 md:px-10 py-16' id='about'>
             <div className='main-title'>
                 <h2>About <span>Me</span></h2>
             </div>
@@ -24,7 +24,7 @@ function About({ skills }) {
                 initial='initial'
                 whileInView={'animate'}
                 viewport={{ once: true, amount: 0.4 }}
-                className='w-full mt-5 mx-auto flex flex-col sm:flex-row items-center gap-3 sm:gap-12 justify-center  shadow-[0_0px_90px_-10px_rgba(0,0,0,0.3)] p-3 pt-10 rounded-xl '>
+                className='w-full mt-5  mx-auto flex flex-col sm:flex-row items-center gap-3 sm:gap-12 justify-center  shadow-[0_0px_90px_-10px_rgba(0,0,0,0.3)] p-3 pt-10 rounded-xl '>
                 <div
                     className='w-2/4 mx-auto relative sm:w-1/3 md:w-[250px] my-5 sm:my-10 rounded-md  '>
                     <Image src={Fateh} alt="" className='z-[2] mx-auto rounded-full ' />
@@ -46,8 +46,7 @@ function About({ skills }) {
                     </div>
                 </motion.div>
             </motion.div>
-
-            <div id='skills' className='main-title pt-[100px]'>
+            <div className='main-title '>
                 <h2>My <span>Skills</span></h2>
             </div>
             <p className='my-4 text-center text-xl'>Check some of my skills </p>
@@ -55,7 +54,7 @@ function About({ skills }) {
                 variants={staggerTextContainer}
                 initial='initial'
                 whileInView='animate'
-                viewport={{ once: true, amount: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className='mt-10  flex gap-10 flex-wrap items-center justify-center'>
                 {skills.map((skill, i) => {
                     return (<motion.div

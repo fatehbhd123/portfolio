@@ -61,8 +61,8 @@ function Contact() {
     };
     return (
         <div id='contact' className=' mt-20 px-7 md:px-10 pt-16 '>
-            <div className='main-title z-[2]'>
-                <h2 className='z-[2]'>Contact <span className='z-[2]'>me</span></h2>
+            <div className='main-title '>
+                <h2 >Contact <span >me</span></h2>
             </div>
             <p className='my-2 md:my-4 text-center text-xl'>I would love to help you ! </p>
             <ToastContainer
@@ -75,10 +75,10 @@ function Contact() {
                 initial='initial'
                 whileInView='animate'
                 viewport={{ once: true, amount: 0.6 }}
-                className='flex z-[2] flex-col md:flex-row  md:pt-10'>
+                className='flex  flex-col md:flex-row  md:pt-10'>
                 <motion.div
                     variants={fadeInRight}
-                    className='flex flex-col  w-full md:w-1/2 z-[2]'>
+                    className='flex flex-col  w-full md:w-1/2 '>
                     <p className={`text-red-500 text-sm  duration-200 ease-in ${!nameErr ? 'opacity-0' : 'opacity-1'} mx-auto`}>This is required!</p>
                     <input
                         onChange={(e) => {
@@ -120,7 +120,7 @@ function Contact() {
                 </motion.div >
                 <motion.div
                     variants={fadeInLeft}
-                    className='z-[2]   w-full md:w-1/2 my-8 md:my-0 flex flex-col items-center'>
+                    className=' w-full md:w-1/2 my-8 md:my-0 flex flex-col items-center'>
                     <div className='text-2xl sm:text-4xl font-bold text-[#1E283C]'>Or you can find me on:</div>
                     <div className='flex gap-10 mt-8'>
                         <div
