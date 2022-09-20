@@ -54,9 +54,9 @@ function Projects({ projects }) {
                                     </div>
                                 </div>
                             </div>
-                            <div className='p-3'>
+                            <div className=' p-3'>
                                 <h3 className='font-semibold text-white group-hover:text-blue-500 duration-200 ease-in '>{project.title}</h3>
-                                <div className='flex gap-2 mt-2'>
+                                <div className='flex gap-2 mt-2 flex-wrap'>
                                     {usedSkills.map((e, i) => {
                                         return (
                                             <div key={i}
