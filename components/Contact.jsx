@@ -134,12 +134,12 @@ function Contact() {
                             <AiOutlineTwitter />
                         </div>
                         <div
-                            onClick={() => openInNewTab('https://www.linkedin.com/in/ben-elhadj-djelloul-mohamed-elfateh-b5215a226/')}
+                            onClick={() => openInNewTab('https://www.linkedin.com/in/ben-elhadj-djelloul-mohamed-elfateh/')}
                             className='hover:text-blue-500 p-2 md:p-4 rounded-full bg-white hover:scale-125 duration-200 text-4xl text-[#1E283C] ease-in cursor-pointer'>
                             <AiFillLinkedin />
                         </div>
                         <div
-                            onClick={() => openInNewTab('https://www.fiverr.com/fatehbhd?up_rollout=true')}
+                            onClick={() => openInNewTab('https://www.fiverr.com/fatehbhd')}
                             className='hover:text-blue-500 p-2 md:p-4 rounded-full bg-white hover:scale-125 duration-200 text-3xl sm:text-4xl text-[#1E283C] ease-in cursor-pointer'>
                             <SiFiverr />
                         </div>

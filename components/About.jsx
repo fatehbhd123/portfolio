@@ -10,9 +10,12 @@ import {
     fadeInDown,
 
 } from '../variants';
+import { useContext } from 'react';
 
 function About({ skills }) {
-
+    // const DataC = useContext(Data);
+    // console.log(DataC)
+    // const skills = skillsData.skills;
     return (
         <div className='px-7 md:px-10 py-16' id='about'>
             <div className='main-title'>
