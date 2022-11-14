@@ -82,6 +82,14 @@ a {
   background-image: url('/home.jpg')
 }
 
+[data-aos="new-animation"] {
+  animation-timing-function: ease;
+  animation-duration: 1500ms;
+}
+[data-aos="new-animation"].aos-animate {
+  top: -1.5rem;
+  left: 1.5rem;
+}
 
 @tailwind base;
 @tailwind components;

@@ -3,18 +3,23 @@ import Feed from '../components/Feed'
 import Navbar from '../components/Navbar'
 import { fetchProjects } from '../utils/fetchProjects'
 import { fetchSkills } from '../utils/fetchSkills'
-import { createContext } from 'react'
-
+import { createContext, useEffect } from 'react'
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 
 
 export default function Home({ skills, projects }) {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+    });
+  }, [])
   const Data = createContext(
     {
       skills: skills,
       projects: projects
     });
-
   return (
     <div
       className='w-[100%] overflow-hidden'>

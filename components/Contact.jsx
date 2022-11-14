@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import { motion } from 'framer-motion';
-import { staggerTextContainer, fadeInRight, fadeInLeft } from "../variants"
 import { AiFillFacebook, AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai"
 import { SiFiverr } from "react-icons/si"
 import { ToastContainer, toast } from 'react-toastify';
@@ -70,15 +68,11 @@ function Contact() {
                 autoClose={1000}
                 hideProgressBar
             />
-            <motion.form
-                variants={staggerTextContainer}
-                initial='initial'
-                whileInView='animate'
-                viewport={{ once: true, amount: 0.6 }}
+            <form
                 className='flex  flex-col md:flex-row  md:pt-10'>
-                <motion.div
-                    variants={fadeInRight}
-                    className='flex flex-col  w-full md:w-1/2 '>
+                <div
+                    data-aos="fade-right"
+                    data-aos-duration='1500' className='flex flex-col  w-full md:w-1/2 '>
                     <p className={`text-red-500 text-sm  duration-200 ease-in ${!nameErr ? 'opacity-0' : 'opacity-1'} mx-auto`}>This is required!</p>
                     <input
                         onChange={(e) => {
@@ -117,9 +111,10 @@ function Contact() {
                         Send
                         <div className='h-full w-0 ease-in duration-200 bg-[#3981F1] group-hover:w-full absolute top-0 left-0 z-[-1]'></div>
                     </div>
-                </motion.div >
-                <motion.div
-                    variants={fadeInLeft}
+                </div >
+                <div
+                    data-aos="fade-left"
+                    data-aos-duration='1000'
                     className=' w-full md:w-1/2 my-8 md:my-0 flex flex-col items-center'>
                     <div className='text-2xl sm:text-4xl font-bold text-[#1E283C]'>Or you can find me on:</div>
                     <div className='flex gap-10 mt-8'>
@@ -144,8 +139,8 @@ function Contact() {
                             <SiFiverr />
                         </div>
                     </div>
-                </motion.div>
-            </motion.form>
+                </div>
+            </form>
         </div>
     )
 }

@@ -1,12 +1,5 @@
 import React from 'react'
 import { urlFor } from '../sanity'
-import { motion } from "framer-motion";
-import {
-    staggerTextContainer,
-    fadeInRight,
-    staggerContainer,
-} from '../variants';
-
 const openInNewTab = url => {
     window.open(url, '_blank');
 };
@@ -19,22 +12,15 @@ function Projects({ projects }) {
                 <h2>My <span>projects</span></h2>
             </div>
             <p className='text-center pt-3 font-medium'>Check out some of my work here!</p>
-            {projects && <motion.div
-                variants={staggerContainer}
-                initial='initial'
-                whileInView={'animate'}
-                viewport={{ once: true, amount: 0.1 }}
+            {projects && <div
                 className='flex gap-x-8 gap-y-14 flex-wrap items-center md:justify-start justify-center  mt-10'>
                 {projects.map((project, i) => {
                     const { usedSkills } = project;
                     return (
-                        <motion.div
+                        <div
                             className='bg-[#1E283C] group shadow-gray-900 shadow-2xl rounded-lg  sm:w-[380px] overflow-hidden'
-                            variants={fadeInRight}
-                            whileHover={{
-                                scale: 1.1,
-                            }}
-                            transition={{ duration: .3 }}
+                            data-aos="fade-right"
+                            data-aos-duration='1500'
                             key={i}
                         >
                             <div className='relative h-40 overflow-hidden'>
@@ -67,10 +53,10 @@ function Projects({ projects }) {
                                     })}
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
                     )
                 })}
-            </motion.div>}
+            </div>}
         </div>
     )
 }
