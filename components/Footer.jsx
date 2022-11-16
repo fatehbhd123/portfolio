@@ -4,7 +4,7 @@ import Fateh from "/public/logo.png"
 
 function Footer() {
     return (
-        <div className='w-full bg-[#1E283C] flex  text-white py-5 flex-col items-center'>
+        <div className='w-full bg-[#1D1D1D] flex  text-white py-5 flex-col items-center'>
             <div className='w-16 h-16'>
                 <Image src={Fateh} alt="bhd" />
             </div>

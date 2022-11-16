@@ -44,7 +44,7 @@ function About({ skills }) {
                     return (<div
                         data-aos="fade-right"
                         data-aos-duration='1500'
-                        className={`flex items-center gap-4 justify-between px-2 rounded-xl group h-14 w-72 bg-[#eee] hover:drop-shadow-xl duration-200 `}
+                        className={`flex items-center gap-4 justify-between px-2 rounded-xl group h-14 w-72 bg-[#e6e3e3] hover:drop-shadow-xl duration-200 `}
                         key={skill.name}
                     >
                         <div className={`h-10 w-10  border-none`}>

@@ -4,7 +4,7 @@ import logo from '/public/logo.png'
 import { FaBars } from "react-icons/fa"
 import { AiOutlineClose } from 'react-icons/ai'
 function Navbar() {
-
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
     const links = [
         'Home', 'About', 'Skills', 'Projects'
     ]
@@ -26,21 +26,33 @@ function Navbar() {
     const changeCol = () => {
         if (window.scrollY >= 60) {
             setBlack(true)
-
         } else {
             setBlack(false)
         }
     }
     useEffect(() => {
         changeCol();
-        window.addEventListener('scroll', changeCol)
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 600) {
+                var currentScrollPos = window.pageYOffset;
+                if (prevScrollPos > currentScrollPos) {
+                    document.getElementById("navbar").style.top = "0";
+                } else {
+                    document.getElementById("navbar").style.top = "-80px";
+                }
+                setPrevScrollPos(currentScrollPos)
+            }
+
+            changeCol();
+        }
+        )
     })
 
     let [open, setOpen] = useState(false);
     return (
-        <nav className={`bg-[#1D1D1D] ${black ? 'md:shadow-2xl md:bg-[#1D1D1D] ' : "md:bg-transparent"}   fixed w-full z-20 top-0 left-0 duration-150`}>
+        <nav id="navbar" className={`bg-[#1D1D1D] ${black ? 'md:shadow-2xl md:bg-[#1D1D1D] ' : "md:bg-transparent"}   fixed w-full z-20 top-0 left-0 duration-200`}>
             <div className="px-10 md:px-10 py-2.5 relative h-full md:static  flex flex-wrap justify-between items-center mx-auto">
-                <div className='h-12 md:h-14 flex items-center w-14 md:w-18 cursor-pointer z-30'>
+                <div className='h-12 md:h-14 flex itbg-[#1E283C]ems-center w-14 md:w-18 cursor-pointer z-30'>
                     <Image src={logo} alt='' />
                 </div>
                 <div className="flex md:order-2">
@@ -51,7 +63,9 @@ function Navbar() {
                             })
                             setOpen(false)
                         }}
-                        type="button" className="text-white bg-blue-700 hover:bg-blue-800  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0">Contact</button>
+                        type="button" className="relative text-[#3981F1]  border-[#3981F1] border-4 hover:text-white  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 group">
+                        <div className='h-full w-0 ease-in duration-200 bg-[#3981F1] group-hover:w-full absolute top-0 left-0 z-[-1]'></div>
+                        Contact</button>
                     <button
                         onClick={() => setOpen((e) => !e)}
                         data-collapse-toggle="navbar-sticky" type="button" className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
